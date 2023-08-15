@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menús con Botones</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="menu-container">
+        <button onclick="mostrarMenu('menu1')">Begin</button>
+        <button onclick="mostrarMenu('menu2')">Other Cars</button>
+        <button onclick="mostrarMenu('menu3')">Cars</button>
+        <button onclick="mostrarMenu('menu4')">About Us</button>
+        <button onclick="mostrarMenu('menu5')">Service and Support</button>
+    </div>
+
+    <div id="menu1" class="menu-content">
+        <img src="imagenes/imagen1.jpg" alt="Imagen 1">
+        <img src="imagenes/imagen2.jpg" alt="Imagen 2">
+        <!-- Puedes poner aquí los 13 textos para este menú -->
+    </div>
+    <!-- Repite el div de "menu-content" para los otros menús, cambiando el id y el contenido según lo desees -->
+
+    <script>
+        function mostrarMenu(id) {
+            const menus = document.querySelectorAll('.menu-content');
+            menus.forEach(menu => menu.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
